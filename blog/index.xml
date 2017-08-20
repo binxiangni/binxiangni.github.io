@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on Binxiang Ni</title>
+    <link>/blog/</link>
+    <description>Recent content in Blogs on Binxiang Ni</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 01 Aug 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Sparse Matrix Support in RcppArmadillo</title>
+      <link>/blog/2017-08-01-sparse-matrix-support-in-rcpparmadillo/</link>
+      <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2017-08-01-sparse-matrix-support-in-rcpparmadillo/</guid>
+      <description>Introduction The documentation is intended for RcppArmadillo sparse matrix user’s convenience based on the documentation of library Matrix and Armadillo. The Unofficial Rcpp API also helps during integration of this documentation.
+There are 31 types of sparse matrices in the package “Matrix” that can be directly used. But for now, only 12 of them are supported in RcppArmadillo: dgCMatrix, dtCMatrix, dsCMatrix, dgTMatrix, dtTMatrix, dsTMatrix, dgRMatrix, dtRMatrix, dsRMatrix, indMatrix, pMatrix, and ddiMatrix.</description>
+    </item>
+    
+  </channel>
+</rss>
