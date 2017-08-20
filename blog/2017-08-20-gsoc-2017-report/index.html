@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.26" />
+
+
+<title>GSOC 2017 Report - Binxiang Ni</title>
+<meta property="og:title" content="GSOC 2017 Report - Binxiang Ni">
+
+
+
+  
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/logo.jpg"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About</a></li>
+    
+    <li><a href="/blog/">Blog</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+
+    <h1 class="article-title">GSOC 2017 Report</h1>
+
+    
+
+    <div class="article-content">
+      <div id="goals" class="section level2">
+<h2>Goals</h2>
+<ul>
+<li>Elevaluate which kind of sparse matrix can be converted.</li>
+<li>Write conversion functions and unit tests for convertible sparse matrices.</li>
+<li>Add warning messages for unconvertible sparse matrices.</li>
+<li>Finish documentation for sparse matrix support in RcppArmadillo.</li>
+</ul>
+</div>
+<div id="commits" class="section level2">
+<h2>Commits</h2>
+<ul>
+<li><a href="https://github.com/RcppCore/RcppArmadillo/pull/135">Add support for dtCMatrix and dsCMatrix</a></li>
+<li><a href="https://github.com/RcppCore/RcppArmadillo/pull/136">Add conversion and unit tests for dgT, dtT and dsTMatrix</a></li>
+<li><a href="https://github.com/RcppCore/RcppArmadillo/pull/139">Add conversion and unit tests for dgR, dtR and dsRMatrix</a></li>
+<li><a href="https://github.com/RcppCore/RcppArmadillo/pull/140">Add conversion and unit tests for pMatrix and ddiMatrix</a></li>
+<li><a href="https://github.com/RcppCore/RcppArmadillo/pull/142">Rewrite conversion for dgT, dtT and dsTMatrix, and add file-based tests</a></li>
+<li><a href="https://github.com/RcppCore/RcppArmadillo/pull/144">Add conversion and unit tests for indMatrix</a></li>
+<li><a href="https://github.com/RcppCore/RcppArmadillo/pull/145">Rewrite conversion for ddiMatrix</a></li>
+<li><a href="https://github.com/RcppCore/RcppArmadillo/pull/147">Add a warning message for matrices that cannot be converted</a></li>
+<li><a href="https://github.com/RcppCore/RcppArmadillo/pull/152">Add new vignette for sparse matrix support</a></li>
+<li><a href="https://github.com/RcppCore/RcppArmadillo/pull/158">Add support for sparse matrix conversion from Python SciPy</a></li>
+</ul>
+</div>
+<div id="notes" class="section level2">
+<h2>Notes</h2>
+<ul>
+<li>When a new function is added, one corresponding unit test should also be accompanied to verify the assertion.</li>
+<li><a href="https://github.com/RcppCore/RcppArmadillo/pull/135#issuecomment-308569350">How to write a unit test for RcppArmadillo</a>.</li>
+<li><a href="http://en.cppreference.com/w/cpp/language/static_cast"><code>static_cast</code></a>.</li>
+<li><a href="https://github.com/RcppCore/RcppArmadillo/pull/135#issuecomment-308627910">The meaning of <code>.</code></a> and <a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/ns-dblcolon.html">The difference between <code>::</code> and <code>:::</code></a>.</li>
+<li><a href="https://github.com/RcppCore/RcppArmadillo/pull/135#issuecomment-308998693">Keeping a decent ChangeLog is important</a>.</li>
+<li><a href="https://github.com/mbonaci/mbo-storm/wiki/Integrate-Travis-CI-with-your-GitHub-repo">Travis CI setup</a>.</li>
+<li><a href="https://github.com/RcppCore/RcppArmadillo/pull/136#issuecomment-309278391">A PR one time</a> to avoid conflicts.</li>
+<li><a href="https://github.com/RcppCore/RcppArmadillo/pull/136#issuecomment-309286287"><code>Merge and squash</code></a>.</li>
+<li><a href="https://github.com/RcppCore/RcppArmadillo/pull/139#issuecomment-309478465"><code>rebase</code></a> and <a href="https://github.com/RcppCore/RcppArmadillo/pull/139#issuecomment-309488302"><code>merge</code></a>.</li>
+<li><a href="https://github.com/RcppCore/RcppArmadillo/pull/140#issuecomment-309626340">DESCRIPTION file contains all essential information of a package.</a>.</li>
+<li>Rcpp is based on proxy models, which may lead to a considerable cost when undertaking operations on <code>IntegerVector</code>. <code>std::vector&lt;int&gt;</code> could be better out of that <a href="https://github.com/RcppCore/RcppArmadillo/pull/140#pullrequestreview-45318881">reason</a>.</li>
+<li><a href="https://github.com/RcppCore/RcppArmadillo/pull/140#discussion_r123146557">Full consideration</a> on types and property of a sparse matrix.</li>
+<li><a href="https://github.com/RcppCore/RcppArmadillo/pull/142#issuecomment-312998351">Mechanism of RUnit</a>.</li>
+<li><a href="https://github.com/RcppCore/RcppArmadillo/pull/142#issuecomment-313249482">Runit requires every unit test covered in a function</a>.</li>
+<li><a href="https://github.com/RcppCore/RcppArmadillo/pull/144#issuecomment-313882515">Close connection after using <code>textConnection()</code></a></li>
+<li><a href="https://github.com/RcppCore/RcppArmadillo/pull/150#issuecomment-319438038">Details in Column Pointer</a>.</li>
+<li><a href="https://github.com/RcppCore/RcppArmadillo/pull/153#issuecomment-319237045">Highlight</a>.</li>
+<li><a href="https://github.com/RcppCore/RcppArmadillo/issues/134#issuecomment-305604312">Consisten code style</a>.</li>
+<li><a href="https://github.com/RcppCore/RcppArmadillo/issues/141#issuecomment-320439915">Procedures for adding a new R function to RcppArmadillo</a>.</li>
+<li><a href="https://github.com/RcppCore/RcppArmadillo/issues/157#issuecomment-320538179">Ways to check a package</a></li>
+<li><a href="https://github.com/RcppCore/RcppArmadillo/issues/157#issuecomment-321234972">Difference between <code>Imports</code> and <code>Suggests</code></a>.</li>
+<li><a href="https://github.com/RcppCore/RcppArmadillo/issues/161#issuecomment-323467101"><code>is()</code> for S4 object</a>.</li>
+<li><a href="https://github.com/RcppCore/RcppArmadillo/issues/163#issuecomment-323504754">Why Rstudio invokes <code>Rcpp::compileAttributes()</code></a>.</li>
+</ul>
+</div>
+<div id="achievement" class="section level2">
+<h2>Achievement</h2>
+<div id="package" class="section level3">
+<h3>Package</h3>
+<p>The R package <a href="https://cran.r-project.org/web/packages/RcppArmadillo/index.html">RcppArmadillo 0.7.960.1.0</a> with enhanced sparse matrix support has been released to CRAN. You can have access to it by <code>install.packages(&quot;RcppArmadillo&quot;)</code> in R.</p>
+</div>
+<div id="vignettes" class="section level3">
+<h3>Vignettes</h3>
+<p>An initial <a href="https://github.com/binxiangni/Sparse_Matrix_in_RcppArmadillo/blob/master/RcppArmadillo-sparseMatrix.Rnw">version</a> on sparse matrix support in RcppArmadillo is written by me, and Dirk updated <a href="https://github.com/RcppCore/RcppArmadillo/blob/master/vignettes/RcppArmadillo-sparseMatrix.Rnw">it</a> with a Rcpp Style. You can have access to more readable vignettes here: <a href="https://github.com/binxiangni/Sparse_Matrix_in_RcppArmadillo/blob/master/RcppArmadillo-sparseMatrix.pdf">Initial</a>, <a href="http://dirk.eddelbuettel.com/tmp/RcppArmadillo-sparseMatrix.pdf">Improved</a></p>
+</div>
+</div>
+<div id="future" class="section level2">
+<h2>Future</h2>
+<p>Although it approches the end of GSOC, I will continue contributing to sparse matrix support in RcppArmadillo in the future. Recently, there will be a new <a href="https://github.com/conradsnicta/armadillo-code/issues/13">compatibility</a> for COO format in Armadillo, more sparse matrix conversion will be needed on the side of RcppArmadillo.</p>
+<p>Moreover, time for me to learn more on sparse matrix algorithms and Rcpp. Hopefully, I can participate in other development or projects on them.</p>
+</div>
+<div id="acknowledge" class="section level2">
+<h2>Acknowledge</h2>
+<p>Quite a lot has been acuqired from the instructions and inspiration of <a href="https://github.com/eddelbuettel">Dirk</a>, <a href="https://github.com/thirdwing">KK</a>, <a href="https://github.com/coatless">James</a> and many other open source contributors during this cool Google Summer of Code. Big thanks for their mentoring.</p>
+</div>
+
+    </div>
+  </article>
+
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+  
+  };
+  (function() {
+    var inIFrame = function() {
+      var iframe = true;
+      try { iframe = window.self !== window.top; } catch (e) {}
+      return iframe;
+    };
+    if (inIFrame()) return;
+    var d = document, s = d.createElement('script');
+    s.src = '//binxiangni.disqus.com/embed.js'; s.async = true;
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          
+          <li><a href="https://github.com/binxiangni">Github</li>
+          <li><a href="https://twitter.com/br1anu">Twitter</span></li>
+          
+        </ul>
+      </footer>

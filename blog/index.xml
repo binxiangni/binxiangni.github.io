@@ -6,10 +6,19 @@
     <description>Recent content in Blogs on Binxiang Ni</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 20 Aug 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>GSOC 2017 Report</title>
+      <link>/blog/2017-08-20-gsoc-2017-report/</link>
+      <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2017-08-20-gsoc-2017-report/</guid>
+      <description>Goals  Elevaluate which kind of sparse matrix can be converted. Write conversion functions and unit tests for convertible sparse matrices. Add warning messages for unconvertible sparse matrices. Finish documentation for sparse matrix support in RcppArmadillo.   Commits  Add support for dtCMatrix and dsCMatrix Add conversion and unit tests for dgT, dtT and dsTMatrix Add conversion and unit tests for dgR, dtR and dsRMatrix Add conversion and unit tests for pMatrix and ddiMatrix Rewrite conversion for dgT, dtT and dsTMatrix, and add file-based tests Add conversion and unit tests for indMatrix Rewrite conversion for ddiMatrix Add a warning message for matrices that cannot be converted Add new vignette for sparse matrix support Add support for sparse matrix conversion from Python SciPy   Notes  When a new function is added, one corresponding unit test should also be accompanied to verify the assertion.</description>
+    </item>
     
     <item>
       <title>Sparse Matrix Support in RcppArmadillo</title>
