@@ -57,7 +57,7 @@ code {
 }
 
 .article-content a {
-  border-bottom: 0.2px solid #CBF8DF;
+  border-bottom: 0.5px solid #CBF8DF;
   box-shadow: inset 0 -1px 0 #CBF8DF;
 }
 

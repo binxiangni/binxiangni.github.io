@@ -17,7 +17,7 @@
       <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>/blog/2017-08-20-gsoc-2017-report/</guid>
-      <description>Project Goals  Evaluate which types of sparse matrices can be converted. Write conversion functions and unit tests for convertible sparse matrices. Add warning messages for unconvertible sparse matrices. Provide documentation for sparse matrix support in RcppArmadillo.   Fully Merged Pull Requests The source codes of RcppArmadillo is stored in Github. Below are all the merged pull requests committed by me during Google Summer of Code:
+      <description>Project Goals  Evaluate which types of sparse matrices can be converted. Write conversion functions and unit tests for convertible sparse matrices. Add warning messages for unconvertible sparse matrices. Provide documentation for sparse matrix support in RcppArmadillo.   Fully Merged Pull Requests The source code of RcppArmadillo is stored in Github. Below are all the merged pull requests committed by me during Google Summer of Code:
  Add support for dtCMatrix and dsCMatrix.</description>
     </item>
     
